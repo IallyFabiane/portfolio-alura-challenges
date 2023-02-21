@@ -380,5 +380,96 @@ svg {
 }
 
 @media  (min-width: 360px) and (max-width: 720px) {
+  .navbar {
+    padding: 16px;
+    gap: 10px;
+    width: 360px;
+    height: 56px;
+  }
 
+  .menu__item:nth-child(1) {
+    display: none;
+  }
+  
+  .menu__item:nth-child(2) {
+    display: none;
+  }
+  
+  .menu__item:nth-child(3) {
+    display: none;
+  }
+  
+  .menu__item:nth-child(4) {
+    display: none;
+  }
+  
+  .menu__item:nth-child(5) {
+    display: none;
+  }
+  
+  .menu__item:nth-child(6) {
+    order: 1;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+  }
+ 
+  .logo > span {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .apresentacao {
+    width: 360px;
+    height: 294px;
+    grid-template-areas: 
+    "apresentacao__banner"
+    "apresentacao__titulo" 
+    "apresentacao__titulo" 
+    "apresentacao__lista"
+    ;
+    place-items: start stretch;
+    grid-template-columns: 360px;
+    grid-template-rows: 98px repeat(2, 52px) 16px;
+    row-gap: 20px;
+    margin: 20px 170px;
+    margin-right: 0;
+  }
+
+  .apresentacao__banner {
+    width: 80px;
+    height: 98px;
+  }
+
+  .apresentacao__titulo {
+    width: 328px;
+    height: 110px;
+  }
+
+  .apresentacao__titulo__h1 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .apresentacao__titulo__h2 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .apresentacao__lista {
+    padding: 0px;
+    gap: 16px;
+    width: 318px;
+    height: 16px;
+    margin: 0;
+  }
+
+  .apresentacao__item {
+    font-size: 12px;
+  }
+  .apresentacao__item > a > img {
+    width: 8px;
+    height: 8px;
+    margin-left: 1px;
+  }
 }
