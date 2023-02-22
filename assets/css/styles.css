@@ -231,7 +231,7 @@ html {
   height: 174px;
   border-radius: 1px;
   background-color: var(--softblue);
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
 }
 
 .skills__card__html {
@@ -501,4 +501,30 @@ svg {
     font-size: 14px;
     line-height: 20px;
   }
+
+  .skills { 
+    grid-template-areas: 
+    "skills__card__html skills__card__css" 
+    "skills__card__javascript skills__card__bootstrap"
+    " skills__card__react skills__card__nodejs"
+    ;
+    grid-template-columns: repeat(2, 180px);
+    grid-template-rows: repeat(3, 160px);
+    width: 360px;
+    height: 508px;
+    column-gap: 10px;
+    padding-left: 50px;
+    place-items: center;
+  }
+
+  .skills__card {
+    width: 156px;
+    height: 118px;
+  }
+
+  .skills__titulo {
+    margin-left: 350px;
+    font-size: 18px;
+  }
+
 }
