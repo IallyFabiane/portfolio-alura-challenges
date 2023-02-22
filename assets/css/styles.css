@@ -620,7 +620,7 @@ svg {
     grid-template-areas: 
     "skills__card__html skills__card__css" 
     "skills__card__javascript skills__card__bootstrap"
-    " skills__card__react skills__card__nodejs"
+    "skills__card__react skills__card__nodejs"
     ;
     grid-template-columns: repeat(2, 180px);
     grid-template-rows: repeat(3, 160px);
@@ -639,6 +639,35 @@ svg {
   .skills__titulo {
     margin-left: 350px;
     font-size: 18px;
+  }
+  
+  .hobbies { 
+    grid-template-areas: 
+    "hobbies__card__exercicio hobbies__card__musica"
+    "hobbies__card__series hobbies__card__comunicacao" 
+    "hobbies__card__analise hobbies__card__equipe"
+    "hobbies__card__resolucao hobbies__card__proatividade"
+    "hobbies__card__adaptabilidade hobbies__card__aprendizado"
+    "hobbies__card__mindfullness hobbies__card__organizacao"
+    ;
+    grid-template-columns: repeat(2, 180px);
+    grid-template-rows: repeat(6, 160px);
+    width: 360px;
+    height: 1100px;
+    column-gap: 10px;
+    padding-left: 50px;
+    place-items: center;
+  }
+
+  .hobbies__card {
+    width: 156px;
+    height: 118px;
+  }
+
+  .hobbies__titulo {
+    font-size: 18px;
+    margin-left: 300px;
+    white-space: nowrap;
   }
 
 }
