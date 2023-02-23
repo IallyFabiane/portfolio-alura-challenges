@@ -269,18 +269,18 @@ svg {
 }
 
 .hobbies {
-    display: grid;
-    grid-template-areas: 
-    "hobbies__card__exercicio hobbies__card__musica hobbies__card__series hobbies__card__comunicacao hobbies__card__analise hobbies__card__equipe"
-    "hobbies__card__resolucao hobbies__card__proatividade hobbies__card__adaptabilidade hobbies__card__aprendizado hobbies__card__mindfullness hobbies__card__organizacao"
-    ;
-    grid-template-columns: repeat(6, 155px);
-    grid-template-rows: repeat(2, 300px);
-    column-gap: 15px;
-    margin-left: 145px;
-    margin-top: 50px;
-    width: 1136px;
-    height: 600px;
+  display: grid;
+  grid-template-areas: 
+  "hobbies__card__exercicio hobbies__card__musica hobbies__card__series hobbies__card__comunicacao hobbies__card__analise hobbies__card__equipe"
+  "hobbies__card__resolucao hobbies__card__proatividade hobbies__card__adaptabilidade hobbies__card__aprendizado hobbies__card__mindfullness hobbies__card__organizacao"
+  ;
+  grid-template-columns: repeat(6, 155px);
+  grid-template-rows: repeat(2, 300px);
+  column-gap: 15px;
+  margin-left: 145px;
+  margin-top: 50px;
+  width: 1136px;
+  height: 600px;
 }
 
 .hobbies__titulo {
@@ -382,9 +382,9 @@ svg {
 
 .formacao__titulo {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
-  gap: 32px;
+  gap: 10px;
 }
 
 .formacao__h3 {
@@ -473,7 +473,7 @@ svg {
   grid-area: formacao__titulo__business;
 }
 
-.formacao__tirulo__devpessoal {
+.formacao__titulo__devpessoal {
   grid-area: formacao__titulo__devpessoal;
 }
 
@@ -636,6 +636,54 @@ svg {
     line-height: 26px;
     text-align: center;
     margin-left: 150px;
+  }
+
+  #formacao {
+    width: 768px;
+  }
+
+  .formacao {
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: 100px 180px 80px 180px 80px 180px 50px;
+    padding: 30px 0;
+    margin-left: 105px;
+    gap: 16px;
+    width: 600px;
+    height: 1000px;
+  }
+
+  .formacao__card {
+    width: 130px;
+    height: 118px;
+  }
+
+  .formacao__titulo {
+    width: 160px;
+  }
+
+  .formacao__h3 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .formacao__h4 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .formacao__h4__typescript,
+  .formacao__h4__desenvolve {
+    white-space: nowrap;
+  }
+
+  .formacao__p {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .formacao__img {
+    width: 70px;
+    height: 48px;
   }
 }
 
