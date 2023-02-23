@@ -6,9 +6,14 @@
   --mediumblue: #4a4e69;
   --darkblue: #22223b;
   --softgreen: #ddedff;
+  --white: #fff;
 }
 
 html {
+  scroll-behavior: smooth;
+}
+
+body {
   font-family: 'Raleway', sans-serif;
   background-color: var(--softlilac);
 }
@@ -51,7 +56,7 @@ html {
   font-weight: bold;
   padding: 5px;
   border-radius: 2px;
-  outline: 2px solid;
+  outline: 1px solid;
   outline-color: var(--mediumlilac);
   outline-offset: 2px;
   transition: all 600ms cubic-bezier(0.2, 0, 0, 0.8);
@@ -203,7 +208,7 @@ html {
   "skills__card__html skills__card__css skills__card__javascript skills__card__bootstrap skills__card__react skills__card__nodejs"
   ;
   grid-template-columns: repeat(6, 155px);
-  grid-template-rows: 300px;
+  grid-template-rows: 200px;
   column-gap: 15px;
   margin-left: 145px;
   margin-top: 50px;
@@ -349,6 +354,138 @@ svg {
   grid-area: hobbies__card__adaptabilidade;
 }
 
+#formacao {
+  background-color: var(--mediumlilac);
+  width: 1440px;
+}
+
+.formacao {
+  display: grid;
+  grid-template-areas: 
+  "formacao__h3 formacao__h3 formacao__h3"
+  "formacao__card__cav formacao__card__desenvolve formacao__card__programacao"
+  "formacao__titulo__cav formacao__titulo__desenvolve formacao__titulo__programacao"
+  "formacao__card__typescript formacao__card__business formacao__card__devpessoal"
+  "formacao__titulo__typescript  formacao__titulo__business formacao__titulo__devpessoal"
+  "formacao__card__java formacao__card__java formacao__card__java"
+  "formacao__titulo__java formacao__titulo__java formacao__titulo__java"
+  ;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: 100px 250px 100px 250px 100px 250px 100px;
+  place-content: center;
+  padding: 80px 0;
+  margin-left: 10px;
+  gap: 32px;
+  width: 1300px;
+  height: 1300px;
+}
+
+.formacao__titulo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.formacao__h3 {
+  grid-area: formacao__h3;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  align-self: start;
+  font-weight: bold;
+  color: var(--darkblue);
+}
+
+.formacao__h4 {
+  font-size: 20px;
+  line-height: 26px;
+  text-align: left;
+  margin-left: 5px;
+  font-weight: bold;
+  color: var(--darkblue);
+}
+
+.formacao__p {
+  font-size: 16px;
+  line-height: 19px;
+  margin-left: 5px;
+  color: var(--mediumblue);
+}
+
+.formacao__card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  padding: 16px;
+  gap: 10px;
+  width: 250px;
+  height: 200px;
+}
+
+.formacao__card__cav {
+  grid-area: formacao__card__cav;
+}
+
+.formacao__card__desenvolve {
+  grid-area: formacao__card__desenvolve;
+} 
+
+.formacao__card__programacao {
+  grid-area: formacao__card__programacao;
+}
+
+.formacao__card__typescript {
+  grid-area: formacao__card__typescript;
+}
+
+.formacao__card__business {
+  grid-area: formacao__card__business;
+}
+
+.formacao__card__devpessoal {
+  grid-area: formacao__card__devpessoal;
+}
+
+.formacao__card__java {
+  grid-area: formacao__card__java;
+}
+
+.formacao__titulo__cav {
+  grid-area: formacao__titulo__cav;
+}
+
+.formacao__titulo__desenvolve {
+  grid-area: formacao__titulo__desenvolve;
+}
+
+.formacao__titulo__programacao {
+  grid-area: formacao__titulo__programacao;
+}
+
+.formacao__titulo__typescript {
+  grid-area: formacao__titulo__typescript;
+}
+
+.formacao__titulo__business {
+  grid-area: formacao__titulo__business;
+}
+
+.formacao__tirulo__devpessoal {
+  grid-area: formacao__titulo__devpessoal;
+}
+
+.formacao__titulo__java {
+  grid-area: formacao__titulo__java;
+}
+
+.formacao__img {
+  width: 120px;
+  height: 100px;
+}
+
 .footer {
   width: 100%;
   padding: 10px;
@@ -357,7 +494,6 @@ svg {
   justify-content: center;
   flex-direction: column;
   gap: 10px;
-  background-color: var(--white);
 }
 
 .footer__brand > a {
@@ -541,6 +677,7 @@ svg {
   .logo > span {
     font-size: 16px;
     line-height: 19px;
+    white-space: nowrap;
   }
 
   .apresentacao {
@@ -599,7 +736,7 @@ svg {
   }
 
   .sobre {
-    padding: 16px;
+    padding: 30px 20px;
     gap: 10px;
   }
 
@@ -608,9 +745,8 @@ svg {
   }
 
   .sobre__mim__p {
-    width: 430px;
-    overflow-wrap: break-word;  
-    word-wrap: break-word; 
+    width: 430px;  
+    word-wrap: normal; 
     word-break: break-word;
     font-size: 14px;
     line-height: 20px;
