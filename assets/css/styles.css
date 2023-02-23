@@ -854,4 +854,63 @@ svg {
     white-space: nowrap;
   }
 
+  .formacao {
+    grid-template-areas: 
+    "formacao__h3"
+    "formacao__card__cav"
+    "formacao__titulo__cav"
+    "formacao__card__desenvolve"
+    "formacao__titulo__desenvolve"
+    "formacao__card__programacao"
+    "formacao__titulo__programacao"
+    "formacao__card__typescript"
+    "formacao__titulo__typescript"
+    "formacao__card__business"
+    "formacao__titulo__business"
+    "formacao__card__devpessoal"
+    "formacao__titulo__devpessoal"
+    "formacao__card__java"
+    "formacao__titulo__java"
+    ;
+    grid-template-columns: 150px;
+    grid-template-rows: 90px repeat(7, 100px 90px);
+    place-content: center;
+    padding: 30px 0;
+    margin-left: 260px;
+    gap: 20px;
+    width: 230px;
+    height: 1800px;
+  }
+
+  .formacao__card {
+    width: 100px;
+    height: 70px;
+  }
+
+  .formacao__h3 {
+    font-size: 22px;
+    line-height: 26px;
+    white-space: nowrap;
+    justify-self: center;
+  }
+
+  .formacao__titulo {
+    width: 80px;
+  }
+
+  .formacao__h4 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .formacao__p {
+    font-size: 14px;
+   line-height: 16px;
+  }
+
+  .formacao__img {
+    width: 84px;
+    height: 58px;
+  }
+
 }
