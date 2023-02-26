@@ -68,7 +68,7 @@ body {
   color: var(--darklilac);
   outline-color: rgba(71, 126, 232, 0);
   outline-offset: 10px;
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .menu__item:nth-child(1) {
@@ -104,13 +104,12 @@ body {
   "apresentacao__lista apresentacao__banner"
   ;
   place-items: center;
-  place-content: center;
   grid-template-columns: 751px 300px;
   grid-template-rows: repeat(2, 122px) 90px;
   width: 1136px;
   height: 368px;
   padding: 0;
-  margin: 0 auto;
+  margin-left: 120px;
 }
 
 .apresentacao__titulo {
@@ -158,6 +157,7 @@ body {
 .apresentacao__banner {
   grid-area: apresentacao__banner;
   align-self: stretch;
+  margin-top: 40px;
   padding: 0;
   width: 230px;
   height: 300px;
@@ -170,7 +170,7 @@ body {
   padding: 64px 0;
   gap: 10px;
   width: 1440px;
-  height: 259px;
+  height: 350px;
   background-color: var(--mediumlilac);
 }
 
@@ -204,11 +204,12 @@ body {
 
 .skills {
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
+  "skills__titulo skills__titulo skills__titulo skills__titulo skills__titulo skills__titulo" 
   "skills__card__html skills__card__css skills__card__javascript skills__card__bootstrap skills__card__react skills__card__nodejs"
   ;
   grid-template-columns: repeat(6, 155px);
-  grid-template-rows: 200px;
+  grid-template-rows: 100px 200px;
   column-gap: 15px;
   margin-left: 145px;
   margin-top: 50px;
@@ -217,7 +218,7 @@ body {
 }
 
 .skills__titulo {
-  margin-top: 50px;
+  grid-area: skills__titulo;
   font-weight: bold;
   font-size: 32px;
   line-height: 38px;
@@ -270,21 +271,22 @@ svg {
 
 .hobbies {
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
+  "hobbies__titulo hobbies__titulo hobbies__titulo hobbies__titulo hobbies__titulo hobbies__titulo" 
   "hobbies__card__exercicio hobbies__card__musica hobbies__card__series hobbies__card__comunicacao hobbies__card__analise hobbies__card__equipe"
   "hobbies__card__resolucao hobbies__card__proatividade hobbies__card__adaptabilidade hobbies__card__aprendizado hobbies__card__mindfullness hobbies__card__organizacao"
   ;
   grid-template-columns: repeat(6, 155px);
-  grid-template-rows: repeat(2, 300px);
+  grid-template-rows: 150px repeat(2, 300px);
   column-gap: 15px;
   margin-left: 145px;
-  margin-top: 50px;
   width: 1136px;
-  height: 600px;
+  height: 700px;
 }
 
 .hobbies__titulo {
-  margin-top: 50px;
+  grid-area: hobbies__titulo;
+  margin: 60px 0;
   font-weight: bold;
   font-size: 32px;
   line-height: 38px;
@@ -371,19 +373,21 @@ svg {
   "formacao__titulo__java formacao__titulo__java formacao__titulo__java"
   ;
   grid-template-columns: repeat(3, 300px);
-  grid-template-rows: 100px 250px 100px 250px 100px 250px 100px;
+  grid-template-rows:repeat(3, 100px 250px) 100px;
   place-content: center;
   padding: 80px 0;
   margin-left: 10px;
   gap: 32px;
   width: 1300px;
-  height: 1300px;
+  height: 1500px;
 }
 
 .formacao__titulo {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 250px;
+  height: 90px;
   gap: 10px;
 }
 
@@ -486,6 +490,81 @@ svg {
   height: 100px;
 }
 
+.projetos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 70px;
+  height: 700px;
+  padding: 100px 0;
+}
+
+.projetos__slide {
+  object-fit: cover;
+  object-position: 50% 50%;
+  max-height: 400px;
+}
+
+.projetos__titulo {
+  background-color: rgb(211, 212, 217, 0.7);
+  padding-top: 0;
+}
+
+.projetos__h3 {
+  font-family:'Raleway', sans-serif;
+  font-weight: bold;
+  margin: 30px 0;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.projetos__h5 {
+  color: var(--darkblue);
+  font-family:'Raleway', sans-serif;
+  font-size: 18px;
+  line-height: 19px;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.projetos__p {
+  color: var(--darkblue);
+  font-family:'Raleway', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.projetos__button {
+  background-color: var(--mediumblue);
+  opacity: 0.2;
+}
+
+.projetos__link {
+  text-decoration: none;
+}
+
+.projetos__h5:hover {
+  color: var(--darklilac);
+  cursor: pointer;
+}
+
+.projetos__controller [data-bs-target] {
+  background-color: var(--darkblue);
+}
+
+.projetos__demo {
+  margin-top: 15px;
+  border-radius: 3px;
+  width: 80px;
+  padding: 5px;
+  font-size: 10px;
+  color: var(--softgreen);
+  background-color: var(--darkblue);
+  font-weight: bold;
+}
+
 .footer {
   width: 100%;
   padding: 10px;
@@ -502,10 +581,27 @@ svg {
   font-weight: bold;
 }
 
-@media (min-width: 720px) and (max-width: 923px) {
+@media (min-width: 768px) and (max-width: 923px) {
+  header {
+    width: 100%;
+  }
+
   .navbar {
-    width: 800px;
+    min-width: 768px;
+    max-width: 923px;
     height: 56px;
+    margin: 0;
+    padding: 0;
+    gap: 350px;
+    align-items: flex-end;
+  }
+
+  .menu {
+    gap: 0;
+  }
+
+  .logo {
+    margin: 5px 60px;
   }
 
   .menu__item:nth-child(1) {
@@ -534,15 +630,20 @@ svg {
   }
 
   .apresentacao {
-    grid-template-columns: 500px 200px;
-    grid-template-rows: repeat(2, 80px) 30px;
-    width: 768px;
-    height: 210px;
-    padding: 0 80px;
+    min-width: 768px;
+    max-width: 800px;
+    height: 270px;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 180px 2px 30px;
+    margin: 0;
+    padding: 5px;
+    column-gap: 30px;
   }
 
   .apresentacao__titulo {
-    width: 424px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 524px;
     height: 130px;
   }
 
@@ -552,48 +653,65 @@ svg {
   }
 
   .apresentacao__titulo__h2 {
-      font-size: 16px;
-      line-height: 19px;
+    font-size: 16px;
+    line-height: 19px;
   }
 
   .apresentacao__banner {
-    width: 146px;
-    height: 180px;
+    width: 166px;
+    height: 200px;
   }
 
   .apresentacao__lista {
-    margin-left: 36px;
+    align-items: flex-start;
+    justify-content: left;
+    margin: 0 auto;
+    width: 524px;
+    height: 30px;
   }
 
   .sobre {
     height: 200px;
+    align-items: center;
+    justify-content: center;
   }
 
   .sobre__mim {
-    padding: 0 80px;
-    height: 180px;
+    align-self: start;
+    padding: 0;
+    gap: 5px;
+    margin-left: 52px;
   }
 
   .sobre__mim__h3 {
     font-size: 22px;
     line-height: 26px;
+    margin-top: 10px;
   }
 
   .sobre__mim__p {
-    width: 500px;
+    width: 100vw;
     height: 112px;
     font-size: 14px;
     line-height: 20px;
   }
 
+  #skills {
+    min-width: 768px;
+    max-width: 923px;
+  }
+
   .skills { 
     grid-template-areas: 
+    "skills__titulo skills__titulo skills__titulo"
     "skills__card__html skills__card__css skills__card__javascript "
     "skills__card__bootstrap skills__card__react skills__card__nodejs"
     ;
-    grid-template-columns: repeat(3, 200px);
-    grid-template-rows: repeat(2, 200px);
-    width: 768px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px repeat(2, 200px);
+    min-width: 768px;
+    max-width: 923px;
+    margin: 0 4%;
     height: 390px;
     column-gap: 10px;
     place-items: center;
@@ -607,22 +725,32 @@ svg {
   .skills__titulo {
     font-size: 22px;
     line-height: 26px;
-    text-align: center;
-    margin-left: 150px;
+    min-width: 768px;
+    max-width: 923px;
+    margin-left: 10%;
+  }
+
+  #hobbies {
+    min-width: 768px;
+    max-width: 923px;
   }
 
   .hobbies { 
     grid-template-areas: 
+    "hobbies__titulo hobbies__titulo hobbies__titulo"
     "hobbies__card__exercicio hobbies__card__musica hobbies__card__series" 
     "hobbies__card__comunicacao hobbies__card__analise hobbies__card__equipe"
     "hobbies__card__resolucao hobbies__card__proatividade hobbies__card__adaptabilidade"
     "hobbies__card__aprendizado hobbies__card__mindfullness hobbies__card__organizacao"
     ;
-    grid-template-columns: repeat(3, 200px);
-    grid-template-rows: repeat(4, 200px);
-    width: 768px;
-    height: 850px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px repeat(4, 200px);
+    min-width: 768px;
+    max-width: 923px;
+    height: 1000px;
     column-gap: 10px;
+    margin: 0 4%;
+    margin-top: 130px;
     place-items: center;
   }
 
@@ -634,21 +762,25 @@ svg {
   .hobbies__titulo {
     font-size: 22px;
     line-height: 26px;
-    text-align: center;
-    margin-left: 150px;
+    min-width: 768px;
+    max-width: 923px;
+    margin-left: 10%;
   }
 
   #formacao {
-    width: 768px;
+    min-width: 768px;
+    max-width: 923px;
   }
 
   .formacao {
     grid-template-columns: repeat(3, 200px);
-    grid-template-rows: 100px 180px 80px 180px 80px 180px 50px;
-    padding: 30px 0;
-    margin-left: 105px;
+    grid-template-rows: repeat(3, 80px 150px) 80px;
+    min-width: 768px;
+    max-width: 923px;
+    place-content: center;
+    margin: 0 3.2%;
     gap: 16px;
-    width: 600px;
+    padding: 0;
     height: 1000px;
   }
 
@@ -658,7 +790,7 @@ svg {
   }
 
   .formacao__titulo {
-    width: 160px;
+   width: 120px;
   }
 
   .formacao__h3 {
@@ -671,10 +803,6 @@ svg {
     line-height: 19px;
   }
 
-  .formacao__h4__typescript,
-  .formacao__h4__desenvolve {
-    white-space: nowrap;
-  }
 
   .formacao__p {
     font-size: 14px;
@@ -685,14 +813,56 @@ svg {
     width: 70px;
     height: 48px;
   }
+
+  #formacao {
+    min-width: 768px;
+    max-width: 923px;
+  }
+
+  .projetos {
+    gap: 20px;
+    width: 720px;
+    height: 620px;
+    margin-left: 150px;
+  }
+ 
+  .projetos__slide {
+    height: 300px;
+  }
+
+  .projetos__h3 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .projetos__h5 {
+    font-size: 14px;
+    line-height: 10px;
+    margin: 15px;
+  }
+
+  .projetos__p {
+    font-size: 10px;
+    line-height: 3px;
+  }
 }
 
-@media  (min-width: 360px) and (max-width: 720px) {
+@media  (min-width: 360px) and (max-width: 767px) {
+  header {
+    width: 100%;
+  }
+
   .navbar {
-    padding: 16px;
+    padding-top: 16px;
     gap: 10px;
-    width: 360px;
+    min-width: 360px;
+    max-width: 767px;
     height: 56px;
+  }
+
+  .menu {
+    flex-direction: column;
+    margin-top: 5px;
   }
 
   .menu__item:nth-child(1) {
@@ -729,20 +899,20 @@ svg {
   }
 
   .apresentacao {
-    width: 360px;
-    height: 294px;
+    min-width: 360px;
+    max-width: 767px;
+    height: 340px;
     grid-template-areas: 
     "apresentacao__banner"
     "apresentacao__titulo" 
     "apresentacao__titulo" 
     "apresentacao__lista"
     ;
+    margin-left: 150px;
     place-items: start stretch;
-    grid-template-columns: 360px;
-    grid-template-rows: 98px repeat(2, 52px) 16px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 140px 60px 30px 16px;
     row-gap: 20px;
-    margin: 20px 170px;
-    margin-right: 0;
   }
 
   .apresentacao__banner {
@@ -751,7 +921,8 @@ svg {
   }
 
   .apresentacao__titulo {
-    width: 328px;
+    min-width: 360px;
+    max-width: 767px;
     height: 110px;
   }
 
@@ -762,13 +933,16 @@ svg {
 
   .apresentacao__titulo__h2 {
     font-size: 14px;
-    line-height: 16px;
+    line-height: 26px;
+    min-width: 600px;
+    max-width: 620px;
   }
 
   .apresentacao__lista {
     padding: 0px;
     gap: 16px;
-    width: 318px;
+    min-width: 360px;
+    max-width: 767px;
     height: 16px;
     margin: 0;
   }
@@ -786,47 +960,53 @@ svg {
   .sobre {
     padding: 30px 20px;
     gap: 10px;
+    height: 250px;
   }
 
   .sobre__mim__h3 {
     font-size: 18px;
+    margin: 0;
   }
 
   .sobre__mim__p {
-    width: 430px;  
-    word-wrap: normal; 
-    word-break: break-word;
+    width: 500px;  
     font-size: 14px;
     line-height: 20px;
   }
 
+  #skills {
+    min-width: 360px;
+    max-width: 767px;
+  }
+
   .skills { 
     grid-template-areas: 
+    "skills__titulo skills__titulo"
     "skills__card__html skills__card__css" 
     "skills__card__javascript skills__card__bootstrap"
     "skills__card__react skills__card__nodejs"
     ;
-    grid-template-columns: repeat(2, 180px);
-    grid-template-rows: repeat(3, 160px);
-    width: 360px;
-    height: 508px;
-    column-gap: 10px;
-    padding-left: 50px;
+    grid-template-columns: repeat(2, 40%);
+    grid-template-rows: 100px repeat(3, 160px);
+    min-width: 360px;
+    max-width: 767px;
+    height: 650px;
+    column-gap: 0px;
     place-items: center;
   }
 
   .skills__card {
-    width: 156px;
+    width: 180px;
     height: 118px;
   }
 
   .skills__titulo {
-    margin-left: 350px;
-    font-size: 18px;
+    font-size: 22px;
   }
   
   .hobbies { 
     grid-template-areas: 
+    "hobbies__titulo hobbies__titulo"
     "hobbies__card__exercicio hobbies__card__musica"
     "hobbies__card__series hobbies__card__comunicacao" 
     "hobbies__card__analise hobbies__card__equipe"
@@ -834,23 +1014,22 @@ svg {
     "hobbies__card__adaptabilidade hobbies__card__aprendizado"
     "hobbies__card__mindfullness hobbies__card__organizacao"
     ;
-    grid-template-columns: repeat(2, 180px);
-    grid-template-rows: repeat(6, 160px);
-    width: 360px;
-    height: 1100px;
-    column-gap: 10px;
-    padding-left: 50px;
+    grid-template-columns: repeat(2, 40%);
+    grid-template-rows: 100px repeat(6, 160px);
+    min-width: 360px;
+    max-width: 767px;
+    height: 1200px;
+    column-gap: 0px;
     place-items: center;
   }
 
   .hobbies__card {
-    width: 156px;
+    width: 180px;
     height: 118px;
   }
 
   .hobbies__titulo {
-    font-size: 18px;
-    margin-left: 300px;
+    font-size: 22px;
     white-space: nowrap;
   }
 
@@ -872,45 +1051,99 @@ svg {
     "formacao__card__java"
     "formacao__titulo__java"
     ;
-    grid-template-columns: 150px;
-    grid-template-rows: 90px repeat(7, 100px 90px);
-    place-content: center;
+    grid-template-columns: 100%;
+    grid-template-rows: 90px repeat(7, 170px 90px);
+    place-items: center;
     padding: 30px 0;
     margin-left: 260px;
     gap: 20px;
-    width: 230px;
-    height: 1800px;
+    min-width: 360px;
+    max-width: 767px;
+    height: 2300px;
   }
 
   .formacao__card {
-    width: 100px;
-    height: 70px;
+    width: 300px;
+    height: 150px;
   }
 
   .formacao__h3 {
+    margin-top: 30px;
     font-size: 22px;
     line-height: 26px;
     white-space: nowrap;
     justify-self: center;
   }
 
-  .formacao__titulo {
-    width: 80px;
-  }
-
   .formacao__h4 {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 18px;
+    line-height: 26px;
   }
 
   .formacao__p {
-    font-size: 14px;
-   line-height: 16px;
+    font-size: 16px;
   }
 
   .formacao__img {
-    width: 84px;
-    height: 58px;
+    width: 100px;
+    height: 70px;
   }
 
+  #projetos {
+    min-width: 360px;
+    max-width: 767px;
+  }
+
+  .projetos {
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 360px;
+    height: 450px;
+    margin-left: 500px;
+  }
+
+  .projetos__h3 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  
+  .projetos__h5 {
+    font-size: 10px;
+    line-height: 8px;
+    margin: 5px;
+  }
+
+  .projetos__p {
+    font-size: 8px;
+    padding-left: 3px;
+  }
+
+  .projetos__slide {
+    width: 250px;
+  }
+
+  .projetos__titulo {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 4px;
+    height: 60px;
+    text-align: left;
+    bottom: 0;
+  }
+
+  .projetos__controller {
+    bottom: -20px;
+  }
+
+  .projetos__demo {
+    position: absolute;
+    margin: 0 170px;
+    width: 60px;
+    font-size: 10px;
+    padding: 5px;
+    bottom: 23px;
+    left: 10px;
+  }
 }

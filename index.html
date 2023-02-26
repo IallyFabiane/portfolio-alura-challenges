@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
     <link rel="shortcut icon" href="assets/img/favicon.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,8 +50,8 @@
             </article>
         </section>
         <section id="skills">
-            <h3 class="skills__titulo">Skills</h3>
             <article class="skills">
+                 <h3 class="skills__titulo">Skills</h3>
                 <div class="skills__card skills__card__html">
                         <svg viewBox="0 0 128 128">
                             <path fill="#22223b" d="M9.032 2l10.005 112.093 44.896 12.401 45.02-12.387L118.968 2H9.032zm89.126 26.539l-.627 7.172L97.255 39H44.59l1.257 14h50.156l-.336 3.471-3.233 36.119-.238 2.27L64 102.609v.002l-.034.018-28.177-7.423L33.876 74h13.815l.979 10.919L63.957 89H64v-.546l15.355-3.875L80.959 67H33.261l-3.383-38.117L29.549 25h68.939l-.33 3.539z"></path>
@@ -90,8 +91,8 @@
             </article>
         </section>
         <section id="hobbies">
-            <h3 class="hobbies__titulo">Hobbies e Soft skills</h3>
                 <article class="hobbies">
+                    <h3 class="hobbies__titulo">Hobbies e Soft skills</h3>
                     <div class="hobbies__card hobbies__card__exercicio">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="37" viewBox="0 0 24 24" style="fill:#22223b;transform: ;msFilter:;"><path d="M6 5v14h3v-6h6v6h3V5h-3v6H9V5zM3 15a1 1 0 0 0 1 1h1V8H4a1 1 0 0 0-1 1v2H2v2h1v2zm18-6a1 1 0 0 0-1-1h-1v8h1a1 1 0 0 0 1-1v-2h1v-2h-1V9z"></path></svg>
                         <p>Exercício físico</p>
@@ -190,21 +191,90 @@
                 <div class="formacao__card formacao__card__java">
                     <img class="formacao__img" src="assets/img/admtec.png">
                 </div>
-                <div class="formacao__tituloformacao__titulo__java">
-                    <h4 class="formacao__h4">Programação em Java: 240hrs</h4>
+                <div class="formacao__titulo formacao__titulo__java">
+                    <h4 class="formacao__h4">Programação em Java</h4>
                     <p class="formacao__p">2022</p>
                 </div>
            </article>
         </section>
-        <section id="projetos">
-            <article class="galeria__container">
-                <div class="galeria__wrapper">
-                    <div class="galeria">
-                        
-                    </div>
+         <section id="projetos" class="projetos">
+            <h3 class="projetos__h3">Experiência profissional</h3>
+            <article id="carouselExampleCaptions" class="carousel slide" data-bs-interval="3000">
+                <div class="carousel-indicators projetos__controller">
+                  <button class="active" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-current="true" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
                 </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/img/decodificador.png" class="d-block w-100 projetos__slide" alt="projeto decodificador">
+                    <div class="carousel-caption d-md-block projetos__titulo">
+                      <a class="projetos__link" href="https://github.com/IallyFabiane/decodificador-codificador-de-texto-alura-challenges-oracle-one" target="_blank" rel="external"><h5 class="projetos__h5">Codificador/Decodificador de Texto</h5></a>
+                      <p class="projetos__p">Alura Challenge Programa ONE</p>
+                      <a href="https://text-coder-decoder.netlify.app/" target="_blank" rel="external"><button class="projetos__demo" type="button">Ver demo</button>
+                    </a>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/keeper.png" class="d-block w-100 projetos__slide" alt="keeper app">
+                    <div class="carousel-caption d-md-block projetos__titulo">
+                      <a class="projetos__link" href="https://github.com/IallyFabiane/keeper-app" target="_blank" rel="external"><h5 class="projetos__h5">Keeper App</h5></a>
+                      <p class="projetos__p">Criado com React.js</p>
+                      <a href="https://keeper-app-ially.netlify.app/" target="_blank" rel="external"><button class="projetos__demo" type="button">Ver demo</button>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/react-form.png" class="d-block w-100 projetos__slide" alt="form-react">
+                    <div class="carousel-caption d-md-block projetos__titulo">
+                      <a class="projetos__link" href="https://github.com/IallyFabiane/formulario-react" target="_blank" rel="external"><h5 class="projetos__h5">Formulário</h5></a>
+                      <p class="projetos__p">React+Vite+Ts e Bootstrap</p>
+                      <a href="https://form-react-vite.netlify.app/" target="_blank" rel="external"><button class="projetos__demo" type="button">Ver demo</button>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/dicee-game.jpg" class="d-block w-100 projetos__slide" alt="dicee game">
+                    <div class="carousel-caption d-md-block projetos__titulo">
+                      <a class="projetos__link" href="https://github.com/IallyFabiane/dicee_game" target="_blank" rel="external"><h5 class="projetos__h5">Dicee Game</h5></a>
+                      <p class="projetos__p">HTML, CSSS e JS</p>
+                      <a href="https://dicee-game-kohl.vercel.app/" target="_blank" rel="external"><button class="projetos__demo" type="button">Ver demo</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/tin-dog.jpg" class="d-block w-100 projetos__slide" alt="tin dog">
+                    <div class="carousel-caption d-md-block projetos__titulo">
+                      <a class="projetos__link" href="https://github.com/IallyFabiane/TinDog" target="_blank" rel="external"><h5 class="projetos__h5">Tin Dog</h5></a>
+                      <p class="projetos__p">Site construído com Bootstrap 5</p>
+                      <a href="https://tin-dog-bootstrap.netlify.app/" target="_blank" rel="external"><button class="projetos__demo" type="button">Ver demo</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-md-block projetos__titulo">
+                      <h5 class="projetos__h5">Sixth slide label</h5>
+                      <p class="projetos__p">Some representative placeholder content for the sixth slide.</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev projetos__button" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next projetos__button" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
             </article>
         </section>
+       
         <section id="contato">
            
         </section>
@@ -213,6 +283,6 @@
         <p class="footer__brand">Desenvolvido por <a href="#home">Ially Fabiane</a></p>
         <p class="footer__ano">2023</p>
     </footer>
-  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 </body>
 </html>
