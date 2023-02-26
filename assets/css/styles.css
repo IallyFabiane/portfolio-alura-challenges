@@ -888,12 +888,12 @@ svg {
   .menu__item:nth-child(6) {
     order: 1;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 16px;
   }
  
   .logo > span {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 19px;
     white-space: nowrap;
   }
@@ -927,12 +927,12 @@ svg {
   }
 
   .apresentacao__titulo__h1 {
-    font-size: 22px;
+    font-size: 24px;
     line-height: 26px;
   }
 
   .apresentacao__titulo__h2 {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 26px;
     min-width: 600px;
     max-width: 620px;
@@ -948,30 +948,32 @@ svg {
   }
 
   .apresentacao__item {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   .apresentacao__item > a > img {
-    width: 8px;
-    height: 8px;
+    width: 12px;
+    height: 12px;
     margin-left: 1px;
   }
 
   .sobre {
     padding: 30px 20px;
     gap: 10px;
-    height: 250px;
+    height: 400px;
   }
 
   .sobre__mim__h3 {
-    font-size: 18px;
+    font-size: 26px;
     margin: 0;
   }
 
   .sobre__mim__p {
-    width: 500px;  
-    font-size: 14px;
-    line-height: 20px;
+    word-wrap: break-word;
+    word-break: break-word; 
+    overflow-wrap: break-word;
+    font-size: 22px;
+    line-height: 30px;
   }
 
   #skills {
@@ -1000,8 +1002,12 @@ svg {
     height: 118px;
   }
 
+  .skills__card > p {
+    font-size: 20px;
+  }
+
   .skills__titulo {
-    font-size: 22px;
+    font-size: 26px;
   }
   
   .hobbies { 
@@ -1028,8 +1034,12 @@ svg {
     height: 118px;
   }
 
+  .hobbies__card > p {
+    font-size: 20px;
+  }
+
   .hobbies__titulo {
-    font-size: 22px;
+    font-size: 26px;
     white-space: nowrap;
   }
 
@@ -1069,19 +1079,19 @@ svg {
 
   .formacao__h3 {
     margin-top: 30px;
-    font-size: 22px;
+    font-size: 26px;
     line-height: 26px;
     white-space: nowrap;
     justify-self: center;
   }
 
   .formacao__h4 {
-    font-size: 18px;
+    font-size: 22px;
     line-height: 26px;
   }
 
   .formacao__p {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .formacao__img {
@@ -1104,7 +1114,7 @@ svg {
   }
 
   .projetos__h3 {
-    font-size: 22px;
+    font-size: 26px;
     line-height: 26px;
   }
   
@@ -1120,7 +1130,7 @@ svg {
   }
 
   .projetos__slide {
-    width: 250px;
+    width: 300px;
   }
 
   .projetos__titulo {
