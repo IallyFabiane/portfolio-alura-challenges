@@ -971,7 +971,7 @@ svg {
   .sobre {
     padding: 30px 20px;
     gap: 10px;
-    height: 750px;
+    height: 650px;
     align-items: flex-start;
   }
 
@@ -983,7 +983,7 @@ svg {
   .sobre__mim__p {
     word-wrap: break-word;
     word-break: break-word; 
-    width: 300px;
+    width: 360px;
     font-size: 22px;
     line-height: 30px;
   }
