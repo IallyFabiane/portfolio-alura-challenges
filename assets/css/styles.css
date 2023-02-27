@@ -998,6 +998,7 @@ svg {
     min-width: 360px;
     max-width: 767px;
     height: 650px;
+    margin-left: 180px;
     column-gap: 10px;
     place-items: center;
   }
@@ -1029,7 +1030,7 @@ svg {
     grid-template-rows: 100px repeat(6, 160px);
     min-width: 360px;
     max-width: 767px;
-    margin-left: 165px;
+    margin-left: 190px;
     height: 1200px;
     column-gap: 10px;
     place-items: center;
@@ -1158,6 +1159,6 @@ svg {
   }
 
   .footer {
-   margin-left: 220px;
+   margin-left: 210px;
   }
 }
