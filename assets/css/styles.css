@@ -1,5 +1,5 @@
 :root {
-  --softlilac: #fbf7f5;
+  --softlilac: #f8f4fd;
   --mediumlilac: #d3c5eb;
   --darklilac: #7209b7;
   --softblue: #d3d4d9;
@@ -236,7 +236,7 @@ body {
   width: 140px;
   height: 174px;
   border-radius: 1px;
-  background-color: var(--softblue);
+  background-color: var(--white);
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -304,7 +304,7 @@ svg {
   width: 140px;
   height: 174px;
   border-radius: 1px;
-  background-color: var(--softblue);
+  background-color: var(--white);
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
 }
 
