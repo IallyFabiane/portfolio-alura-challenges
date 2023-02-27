@@ -854,7 +854,7 @@ svg {
 
   .navbar {
     padding-top: 16px;
-    gap: 10px;
+    gap: 2px;
     min-width: 360px;
     max-width: 767px;
     height: 56px;
@@ -888,12 +888,16 @@ svg {
   .menu__item:nth-child(6) {
     order: 1;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 16px;
+  }
+
+  .logo > img {
+    width: 30px;
   }
  
   .logo > span {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 19px;
     white-space: nowrap;
   }
@@ -901,7 +905,7 @@ svg {
   .apresentacao {
     min-width: 360px;
     max-width: 767px;
-    height: 340px;
+    height: 500px;
     grid-template-areas: 
     "apresentacao__banner"
     "apresentacao__titulo" 
@@ -911,31 +915,32 @@ svg {
     margin-left: 150px;
     place-items: start stretch;
     grid-template-columns: 1fr;
-    grid-template-rows: 140px 60px 30px 16px;
+    grid-template-rows: 160px 160px 30px 16px;
     row-gap: 20px;
   }
 
   .apresentacao__banner {
-    width: 80px;
-    height: 98px;
+    width: 100px;
+    height: 120px;
   }
 
   .apresentacao__titulo {
-    min-width: 360px;
+    width: 360px;
     max-width: 767px;
-    height: 110px;
   }
 
   .apresentacao__titulo__h1 {
-    font-size: 24px;
-    line-height: 26px;
+    word-wrap: break-word;
+    word-break: break-word;
+    font-size: 26px;
+    line-height: 36px;
   }
 
   .apresentacao__titulo__h2 {
+    word-wrap: break-word;
+    word-break: break-word;
     font-size: 18px;
     line-height: 26px;
-    min-width: 600px;
-    max-width: 620px;
   }
 
   .apresentacao__lista {
@@ -960,18 +965,18 @@ svg {
   .sobre {
     padding: 30px 20px;
     gap: 10px;
-    height: 400px;
+    height: 750px;
   }
 
   .sobre__mim__h3 {
     font-size: 26px;
-    margin: 0;
+    margin-top: 20px;
   }
 
   .sobre__mim__p {
     word-wrap: break-word;
     word-break: break-word; 
-    overflow-wrap: break-word;
+    width: 300px;
     font-size: 22px;
     line-height: 30px;
   }
@@ -988,17 +993,17 @@ svg {
     "skills__card__javascript skills__card__bootstrap"
     "skills__card__react skills__card__nodejs"
     ;
-    grid-template-columns: repeat(2, 40%);
+    grid-template-columns: repeat(2, 180px);
     grid-template-rows: 100px repeat(3, 160px);
     min-width: 360px;
     max-width: 767px;
     height: 650px;
-    column-gap: 0px;
+    column-gap: 10px;
     place-items: center;
   }
 
   .skills__card {
-    width: 180px;
+    width: 150px;
     height: 118px;
   }
 
@@ -1020,22 +1025,23 @@ svg {
     "hobbies__card__adaptabilidade hobbies__card__aprendizado"
     "hobbies__card__mindfullness hobbies__card__organizacao"
     ;
-    grid-template-columns: repeat(2, 40%);
+    grid-template-columns: repeat(2, 160px);
     grid-template-rows: 100px repeat(6, 160px);
     min-width: 360px;
     max-width: 767px;
+    margin-left: 165px;
     height: 1200px;
-    column-gap: 0px;
+    column-gap: 10px;
     place-items: center;
   }
 
   .hobbies__card {
-    width: 180px;
+    width: 150px;
     height: 118px;
   }
 
   .hobbies__card > p {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   .hobbies__titulo {
@@ -1064,9 +1070,8 @@ svg {
     grid-template-columns: 100%;
     grid-template-rows: 90px repeat(7, 170px 90px);
     place-items: center;
-    padding: 30px 0;
-    margin-left: 260px;
     gap: 20px;
+    margin: 0;
     min-width: 360px;
     max-width: 767px;
     height: 2300px;
@@ -1099,18 +1104,13 @@ svg {
     height: 70px;
   }
 
-  #projetos {
-    min-width: 360px;
-    max-width: 767px;
-  }
-
   .projetos {
     gap: 20px;
     align-items: center;
     justify-content: center;
     width: 360px;
     height: 450px;
-    margin-left: 500px;
+    margin-left: 220px;
   }
 
   .projetos__h3 {
@@ -1155,5 +1155,9 @@ svg {
     padding: 5px;
     bottom: 23px;
     left: 10px;
+  }
+
+  .footer {
+   margin-left: 220px;
   }
 }
