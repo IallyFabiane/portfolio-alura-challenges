@@ -1295,7 +1295,7 @@ svg {
   .sobre {
     padding: 30px 20px;
     gap: 10px;
-    width: 360px;
+    width: 420px;
     height: 700px;
     align-items: flex-start;
   }
@@ -1314,7 +1314,7 @@ svg {
   }
 
   #skills {
-    width: 360px;
+    width: 420px;
   }
 
   .skills { 
@@ -1348,7 +1348,7 @@ svg {
   }
   
  #hobbies {
-  width: 360px;
+  width: 420px;
  }
 
   .hobbies { 
@@ -1386,7 +1386,7 @@ svg {
   }
 
   #formacao {
-    width: 360px;
+    width: 420px;
   }
 
   .formacao {
@@ -1503,7 +1503,7 @@ svg {
     align-items: center;
     padding: 32px;
     gap: 10px;
-    width: 380px;
+    width: 420px;
     height: 665px;
   }
 
