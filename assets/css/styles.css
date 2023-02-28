@@ -1235,8 +1235,7 @@ svg {
   }
 
   .apresentacao {
-    min-width: 360px;
-    max-width: 767px;
+    width: 360px;
     height: 500px;
     grid-template-areas: 
     "apresentacao__banner"
@@ -1279,26 +1278,25 @@ svg {
   .apresentacao__lista {
     padding: 0px;
     gap: 16px;
-    min-width: 360px;
-    max-width: 767px;
+    width: 360px;
     height: 16px;
     margin: 0;
   }
 
   .apresentacao__item {
-    font-size: 18px;
+    font-size: 13px;
   }
 
   .apresentacao__item > a > img {
-    width: 12px;
-    height: 12px;
-    margin-left: 1px;
+    width: 10px;
+    height: 10px;
   }
 
   .sobre {
     padding: 30px 20px;
     gap: 10px;
-    height: 650px;
+    width: 360px;
+    height: 700px;
     align-items: flex-start;
   }
 
@@ -1310,14 +1308,13 @@ svg {
   .sobre__mim__p {
     word-wrap: break-word;
     word-break: break-word; 
-    width: 360px;
+    width: 320px;
     font-size: 22px;
     line-height: 30px;
   }
 
   #skills {
-    min-width: 360px;
-    max-width: 767px;
+    width: 360px;
   }
 
   .skills { 
@@ -1350,6 +1347,10 @@ svg {
     font-size: 26px;
   }
   
+ #hobbies {
+  width: 360px;
+ }
+
   .hobbies { 
     grid-template-areas: 
     "hobbies__titulo hobbies__titulo"
@@ -1382,6 +1383,10 @@ svg {
   .hobbies__titulo {
     font-size: 26px;
     white-space: nowrap;
+  }
+
+  #formacao {
+    width: 360px;
   }
 
   .formacao {
@@ -1498,7 +1503,7 @@ svg {
     align-items: center;
     padding: 32px;
     gap: 10px;
-    width: 360px;
+    width: 380px;
     height: 665px;
   }
 
