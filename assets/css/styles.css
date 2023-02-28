@@ -559,6 +559,35 @@ svg {
   font-weight: bold;
 }
 
+#contato {
+  background-color: var(--mediumlilac);
+}
+
+::-webkit-input-placeholder {
+  color: var(--mediumblue);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: var(--mediumblue);  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: var(--mediumblue);  
+}
+
+:-ms-input-placeholder {  
+  color: var(--mediumblue);  
+}
+
+.contato__input:focus,
+.contato__input--textarea:focus {
+  outline: none;
+  border-bottom: 2px solid var(--darklilac);
+  margin-top: 16px;
+  width: 295px;
+  color: var(--darkblue);
+}
+
 .footer {
   width: 100%;
   padding: 10px;
@@ -896,7 +925,7 @@ svg {
   .menu__item:nth-child(6) {
     order: 1;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 16px;
   }
 
@@ -909,7 +938,7 @@ svg {
   }
  
   .logo > span {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 19px;
     white-space: nowrap;
   }
@@ -1040,12 +1069,11 @@ svg {
     "hobbies__card__adaptabilidade hobbies__card__aprendizado"
     "hobbies__card__mindfullness hobbies__card__organizacao"
     ;
-    grid-template-columns: repeat(2, 160px);
+    grid-template-columns: repeat(2, 180px);
     grid-template-rows: 100px repeat(6, 160px);
     min-width: 360px;
     max-width: 767px;
-    margin: 0 auto;
-    margin-left: 20px;
+    margin: 0;
     height: 1100px;
     column-gap: 10px;
     place-items: center;
@@ -1173,14 +1201,6 @@ svg {
     left: 10px;
   }
 
-  footer {
-   width: 100%;
-  }
-
-  .footer {
-    margin: 0 auto;
-  }
-
   #contato {
     display: flex;
     flex-direction: column;
@@ -1188,17 +1208,130 @@ svg {
     padding: 32px;
     gap: 10px;
     width: 360px;
-    height: 675px;
+    height: 665px;
+    background-color: var(--mediumlilac);
   }
 
   .contato {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     padding: 0px;
-    gap: 16px;
+    gap: 30px;
     width: 296px;
     height: 611px;
-}
+  }
 
+  .contato__titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    width: 296px;
+    height: 110px;
+  }
+
+  .contato__legend { 
+    width: 85px;
+    height: 26px;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    color: var(--darkblue);
+  }
+
+  .contato__p {
+    width: 296px;
+    height: 76px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--mediumblue);
+  }
+
+  .contato__fields {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 32px;
+    width: 296px;
+    height: 430px;
+  }
+
+  .contato__input__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    width: 296px;
+    height: 56px;
+    background-color: var(--white);
+    border-radius: 4px;
+  }
+
+  .contato__elementos {
+    display: flex;
+    height: 40px;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px 12px;
+  }
+
+  .contato__textos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+    width: 272px;
+    height: 40px;
+  }
+
+  .contato__label {
+    width: 272px;
+    height: 16px;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--mediumblue);
+  }
+
+  .contato__input,
+  .contato__input--textarea {
+    width: 272px;
+    height: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    border: none;
+    color: var(--darkblue);
+  }
+
+  .contato__input__container--textarea,
+  .contato__input--textarea,
+  .contato__elementos--textarea,
+  .contato__textos--textarea {
+    height: 133px;
+  }
+
+  .contato__button {
+    background-color: var(--darkblue);
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 10px;
+    width: 170px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 4px;
+  }
+
+  .footer {
+    padding: 30px;
+  }
 }
