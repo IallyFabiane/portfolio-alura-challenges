@@ -1515,7 +1515,7 @@ svg {
     flex-direction: column;
     align-items: center;
     padding: 0px;
-    gap: 30px;
+    gap: 20px;
     width: 296px;
     height: 611px;
   }
@@ -1555,6 +1555,7 @@ svg {
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
+    margin-top: 15px;
     gap: 32px;
     width: 296px;
     height: 430px;
