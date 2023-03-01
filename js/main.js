@@ -1,7 +1,7 @@
 
 //let containerElementos = document.querySelectorAll('.contato__elementos');
 //let padding = window.getComputedStyle(containerElementos).padding;
-window.scroll = ScrollReveal({reset: true });
+window.scroll = ScrollReveal({delay: 200, interval: 300 });
 
 scroll.reveal('.navbar', {
   duration: 1400,
@@ -38,6 +38,7 @@ scroll.reveal('.sobre__mim', {
 });
   
 scroll.reveal('.skills__card', {
+  mobile: true,
   duration: 1000,
   distance: '100px',
   origin: 'left',
