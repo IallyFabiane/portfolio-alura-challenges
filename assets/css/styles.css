@@ -59,11 +59,11 @@ body {
   outline: 1px solid;
   outline-color: var(--mediumlilac);
   outline-offset: 2px;
-  transition: all 600ms cubic-bezier(0.2, 0, 0, 0.8);
+  transition: all 300ms cubic-bezier(0.2, 0, 0, 0.8);
 }
 
 .menu__item > a:hover {
-  transition: all 500ms ease-in-out;
+  transition: all 300ms ease-in-out;
   font-weight: bold;
   color: var(--darklilac);
   outline-color: rgba(71, 126, 232, 0);
@@ -144,7 +144,7 @@ body {
 }
 
 .apresentacao__item > a > img {
-  margin-left: 10px;
+  margin-left: 5px;
   color: var(--darkblue);
 }
 
@@ -574,6 +574,7 @@ svg {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   padding: 0px;
   gap: 0px;
   width: 1000px;
@@ -747,6 +748,7 @@ svg {
 
 .footer {
   width: 100%;
+  height: 100px;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -853,6 +855,10 @@ svg {
     margin: 0 auto;
     width: 524px;
     height: 30px;
+  }
+
+  .apresentacao__item > a > img {
+    margin-left: 5px;
   }
 
   .sobre {
@@ -1042,6 +1048,7 @@ svg {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
     padding: 0px;
     gap: 32px;
     width: 704px;
@@ -1531,6 +1538,7 @@ svg {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 0px;
     gap: 20px;
     width: 296px;
@@ -1654,5 +1662,6 @@ svg {
 
   .footer {
     padding: 30px;
+    height: 100px;
   }
 }
