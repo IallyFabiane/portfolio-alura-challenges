@@ -1605,6 +1605,15 @@ svg {
     line-height: 20px;
   }
 
+  .contato__input:focus {
+    height: 22px;
+  }
+
+  .contato__input:focus,
+  .contato__input--textarea:focus {
+    width: 296px;
+  }
+
   .contato__input__container--textarea,
   .contato__input--textarea,
   .contato__elementos--textarea,
