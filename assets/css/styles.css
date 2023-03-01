@@ -767,8 +767,7 @@ svg {
   }
 
   .navbar {
-    min-width: 768px;
-    max-width: 800px;
+    width: 768px;
     height: 56px;
     margin: 0;
     padding: 0;
@@ -781,7 +780,7 @@ svg {
   }
 
   .logo {
-    margin: 5px 60px;
+    margin: 5px 10px;
   }
 
   .logo > span {
@@ -815,13 +814,12 @@ svg {
   }
 
   .apresentacao {
-    min-width: 768px;
-    max-width: 800px;
+    width: 768px;
     height: 270px;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 528px 200px;
     grid-template-rows: 180px 2px 30px;
-    margin: 0;
-    padding: 5px;
+    margin: 0px 10px;
+    padding: 0px;
     column-gap: 0px;
   }
 
@@ -856,16 +854,16 @@ svg {
   }
 
   .sobre {
-    height: 400px;
+    width: 768px;
     align-items: center;
     justify-content: center;
   }
 
   .sobre__mim {
     align-self: start;
-    padding: 0;
+    width: 620px;
+    padding-left: 15px;
     gap: 30px;
-    margin-left: 60px;
   }
 
   .sobre__mim__h3 {
@@ -875,15 +873,15 @@ svg {
 
   .sobre__mim__p {
     height: 760px;
-    font-size: 20px;
-    line-height: 30px;
+    width: 720px;
+    font-size: 18px;
+    line-height: 28px;
     word-break: break-word;
     word-wrap: break-word;
   }
 
   #skills {
-    min-width: 768px;
-    max-width: 923px;
+    width: 768px;
   }
 
   .skills { 
@@ -894,8 +892,7 @@ svg {
     ;
     grid-template-columns: repeat(3, 250px);
     grid-template-rows: 100px repeat(2, 200px);
-    min-width: 768px;
-    max-width: 923px;
+    width: 768px;
     margin: 0;
     margin-left: 10px;
     height: 390px;
@@ -917,8 +914,7 @@ svg {
   }
 
   #hobbies {
-    min-width: 768px;
-    max-width: 923px;
+    width: 768px;
   }
 
   .hobbies { 
@@ -931,8 +927,7 @@ svg {
     ;
     grid-template-columns: repeat(3, 250px);
     grid-template-rows: 100px repeat(4, 200px);
-    min-width: 768px;
-    max-width: 923px;
+    width: 768px;
     height: 1000px;
     column-gap: 25px;
     margin: 0;
@@ -955,15 +950,13 @@ svg {
   }
 
   #formacao {
-    min-width: 768px;
-    max-width: 800px;
+    width: 768px;
   }
 
   .formacao {
     grid-template-columns: repeat(3, 250px);
     grid-template-rows: repeat(3, 80px 150px) 80px;
-    min-width: 768px;
-    max-width: 800px;
+    width: 768px;
     place-content: center;
     margin: 0;
     gap: 16px;
@@ -999,6 +992,10 @@ svg {
   .formacao__img {
     width: 70px;
     height: 48px;
+  }
+
+  #projetos {
+    width: 768px;
   }
 
   .projetos {
