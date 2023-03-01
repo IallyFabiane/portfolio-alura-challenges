@@ -1,6 +1,4 @@
 
-//let input = document.querySelectorAll('.contato__input');
-//let label = document.querySelectorAll('.contato__label');
 //let containerElementos = document.querySelectorAll('.contato__elementos');
 //let padding = window.getComputedStyle(containerElementos).padding;
 
