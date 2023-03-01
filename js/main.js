@@ -1,7 +1,73 @@
 
 //let containerElementos = document.querySelectorAll('.contato__elementos');
 //let padding = window.getComputedStyle(containerElementos).padding;
+window.scroll = ScrollReveal({reset: true });
 
+scroll.reveal('.navbar', {
+  duration: 1400,
+  scale: '0.99',
+  easing: 'ease-in-out'
+});
+
+scroll.reveal('.apresentacao__titulo', {
+  duration: 1200,
+  distance: '100px',
+  origin: 'left',
+  easing: 'ease-in-out'
+});
+
+scroll.reveal('.apresentacao__lista', {
+  duration: 1000,
+  distance: '100px',
+  origin: 'left',
+  easing: 'ease-in-out'
+});
+
+scroll.reveal('.apresentacao__banner', {
+  duration: 1300,
+  distance: '100px',
+  origin: 'right',
+  easing: 'ease-in-out'
+});
+
+scroll.reveal('.sobre__mim', {
+  duration: 1000,
+  distance: '100px',
+  origin: 'top',
+  easing: 'ease-in-out'
+});
+  
+scroll.reveal('.skills__card', {
+  duration: 1000,
+  distance: '100px',
+  origin: 'left',
+  easing: 'ease-in-out'
+});
+
+scroll.reveal('.hobbies__card', {
+  duration: 1000,
+  distance: '100px',
+  origin: 'right',
+  easing: 'ease-in-out'
+});
+
+scroll.reveal('.formacao', {
+  duration: 800,
+  distance: '100px',
+  origin: 'bottom',
+  easing: 'ease-in-out'
+});
+
+scroll.reveal('.contato', {
+  duration: 1200,
+  opacity: 0.1
+});
+
+scroll.reveal('.footer', {
+  duration: 1500,
+  rotate: {x:0, y:80, z:0}
+});
+ 
 let inputs = document.querySelectorAll('.contato__input');
 let textarea = document.querySelector('.contato__input--textarea');
 let form = document.querySelector('form');
