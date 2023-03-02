@@ -490,14 +490,14 @@ svg {
   height: 100px;
 }
 
-.projetos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 70px;
+#projetos {
+  width: 900px;
   height: 700px;
-  padding: 100px 0;
+  margin: 10px auto;
+}
+
+.projetos__slide {
+  object-fit: cover;
 }
 
 .projetos__titulo {
@@ -506,9 +506,9 @@ svg {
 }
 
 .projetos__h3 {
-  font-family:'Raleway', sans-serif;
+  text-align: center;
   font-weight: bold;
-  margin: 30px 0;
+  margin: 100px auto;
   font-size: 32px;
   line-height: 38px;
 }
@@ -532,7 +532,7 @@ svg {
 
 .projetos__button {
   background-color: var(--mediumblue);
-  opacity: 0.2;
+  opacity: 0.1;
 }
 
 .projetos__link {
@@ -1002,21 +1002,9 @@ svg {
   }
 
   #projetos {
-    width: 768px;
-  }
-
-  .projetos {
-    gap: 20px;
-    width: 720px;
-    height: 500px;
-    margin-left: 0;
+    width: 730px;
+    height: 600px;
     margin: 0 auto;
-    align-items: center;
-    justify-content: center;
-  }
- 
-  .projetos__slide {
-    height: 300px;
   }
 
   .projetos__h3 {
@@ -1467,22 +1455,15 @@ svg {
   }
 
   #projetos {
-    width: 390px;
-  }
-
-  .projetos {
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    padding-left: 30px;
-    width: 360px;
+    width: 340px;
+    height: 360px;
     margin: 0 auto;
-    height: 450px;
   }
 
   .projetos__h3 {
     font-size: 26px;
     line-height: 26px;
+    margin: 30px auto;
   }
   
   .projetos__h5 {
