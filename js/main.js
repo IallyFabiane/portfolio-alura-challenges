@@ -1,7 +1,7 @@
 
 //let containerElementos = document.querySelectorAll('.contato__elementos');
 //let padding = window.getComputedStyle(containerElementos).padding;
-window.scroll = ScrollReveal({reset: true, interval: 100} );
+window.scroll = ScrollReveal({reset: true, interval: 100, integrity: true} );
 
 scroll.reveal('.navbar', {
   duration: 1400,
