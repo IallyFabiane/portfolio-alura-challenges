@@ -35,19 +35,19 @@ scroll.reveal('.apresentacao__banner', {
 });
 
 scroll.reveal('.sobre__mim', {
-  duration: 1000,
+  duration: 800,
   distance: '20px',
   origin: 'top',
 });
 
 scroll.reveal('.skills__card', {
-  duration: 1000,
+  duration: 500,
   distance: '20px',
   origin: 'left',
 });
 
 scroll.reveal('.hobbies__card', {
-  duration: 1000,
+  duration: 500,
   distance: '20px',
   origin: 'right',
 });
@@ -59,6 +59,7 @@ scroll.reveal('.formacao', {
 });
 
 scroll.reveal('.contato', {
+  mobile: false,
   duration: 1200,
   opacity: 0.1,
 });
