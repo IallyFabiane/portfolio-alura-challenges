@@ -3,10 +3,8 @@
 //let padding = window.getComputedStyle(containerElementos).padding;
 const scroll = ScrollReveal({
   reset: true,
-  interval: 100,
   mobile: true, // Ativar configurações para dispositivos móveis
-  delay: 100, // Adicionar um pequeno atraso para melhorar a experiência do usuário
-  easing: 'ease-in-out',
+  easing: 'ease-out',
   scale: 0.95, // Diminuir o scale para melhorar a experiência do usuário
   distance: '10px' // Diminuir a distância para melhorar a experiência do usuário
 });
@@ -35,32 +33,29 @@ scroll.reveal('.apresentacao__banner', {
 });
 
 scroll.reveal('.sobre__mim', {
-  duration: 300,
-  distance: '20px',
+  mobile: false,
+  duration: 1000,
   origin: 'top',
 });
 
 scroll.reveal('.skills__card', {
   duration: 500,
-  distance: '20px',
   origin: 'left',
 });
 
 scroll.reveal('.hobbies__card', {
   duration: 500,
-  distance: '20px',
   origin: 'right',
 });
 
 scroll.reveal('.formacao', {
   duration: 800,
-  distance: '20px',
   origin: 'bottom',
 });
 
 scroll.reveal('.contato', {
   mobile: false,
-  duration: 1200,
+  duration: 500,
   opacity: 0.1,
 });
 
