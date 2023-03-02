@@ -1,7 +1,7 @@
 
 //let containerElementos = document.querySelectorAll('.contato__elementos');
 //let padding = window.getComputedStyle(containerElementos).padding;
-window.scroll = ScrollReveal({reset: true, interval: 100, mobile: true });
+window.scroll = ScrollReveal({reset: true, interval: 100} );
 
 scroll.reveal('.navbar', {
   duration: 1400,
@@ -65,6 +65,7 @@ scroll.reveal('.contato', {
 });
 
 scroll.reveal('.footer', {
+  mobile: false,
   duration: 1000,
   rotate: {x:0, y:80, z:0}
 });
