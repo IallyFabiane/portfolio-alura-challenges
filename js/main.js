@@ -5,7 +5,7 @@ const scroll = ScrollReveal({
   reset: true,
   interval: 100,
   mobile: true, // Ativar configurações para dispositivos móveis
-  delay: 300, // Adicionar um pequeno atraso para melhorar a experiência do usuário
+  delay: 100, // Adicionar um pequeno atraso para melhorar a experiência do usuário
   easing: 'ease-in-out',
   scale: 0.95, // Diminuir o scale para melhorar a experiência do usuário
   distance: '10px' // Diminuir a distância para melhorar a experiência do usuário
@@ -35,7 +35,7 @@ scroll.reveal('.apresentacao__banner', {
 });
 
 scroll.reveal('.sobre__mim', {
-  duration: 800,
+  duration: 300,
   distance: '20px',
   origin: 'top',
 });
@@ -119,5 +119,6 @@ campo3.addEventListener('input', verificarCampos);
 campo4.addEventListener('input', verificarCampos);
 
 
-
-
+button.addEventListener('click', () => {
+  button.classList.add('loading');
+});
