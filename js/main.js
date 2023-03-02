@@ -94,11 +94,33 @@ textarea.addEventListener('focus', (event) => {
 
 textarea.addEventListener('blur', () => {
     textarea.closest('.contato__elementos').style.padding = "6px 12px";
+    validarTextarea();
 });
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 })
+
+function validarTextarea() {
+  let textarea = document.querySelector('.contato__input--textarea');
+  const texto = textarea.value;
+  const container = document.querySelector('.container__mensagem');
+
+  if (texto.trim() === '') {
+    // se o campo estiver vazio
+    container.innerText = 'Este campo é obrigatório';
+  } else  {
+    // se o campo estiver vazio
+    container.innerText = '';
+  }
+  
+  if (texto.length > 300) {
+    // se o texto digitado for maior do que 300 caracteres
+    container.innerText = 'Este campo deve conter até 300 caracteres.';
+  }
+  
+}
+
 
 function verificarCampos() {
   if (campo1.value !== '' && campo2.value !== '' && campo3.value !== '' && campo4.value !== '') {
@@ -112,7 +134,6 @@ campo1.addEventListener('input', verificarCampos);
 campo2.addEventListener('input', verificarCampos);
 campo3.addEventListener('input', verificarCampos);
 campo4.addEventListener('input', verificarCampos);
-
 
 button.addEventListener('click', () => {
   button.classList.add('loading');
