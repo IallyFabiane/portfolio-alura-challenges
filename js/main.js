@@ -63,12 +63,6 @@ scroll.reveal('.contato', {
   duration: 1200,
   opacity: 0.1
 });
-
-scroll.reveal('.footer', {
-  mobile: false,
-  duration: 1000,
-  rotate: {x:0, y:80, z:0}
-});
  
 let inputs = document.querySelectorAll('.contato__input');
 let textarea = document.querySelector('.contato__input--textarea');
