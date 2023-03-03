@@ -136,16 +136,46 @@ campo3.addEventListener('input', verificarCampos);
 campo4.addEventListener('input', verificarCampos);
 
 button.addEventListener('click', () => {
+  const contatoFields = document.querySelector('.contato__fields');
   if (campo1.value !== '' && campo2.value !== '' && campo3.value !== '' && campo4.value !== '') {
-    if (!button.classList.contains('loading')) {
-      button.classList.add('loading');
-      button.innerHTML = 'Enviado com sucesso!';
+  
+      // cria o elemento svg
+      const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      svg.setAttribute("class", "checkmark");
+      svg.setAttribute("viewBox", "0 0 52 52");
+
+      // cria o elemento circle
+      const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      circle.setAttribute("class", "checkmark__circle");
+      circle.setAttribute("cx", "26");
+      circle.setAttribute("cy", "26");
+      circle.setAttribute("r", "25");
+      circle.setAttribute("fill", "none");
+
+      // cria o elemento path
+      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      path.setAttribute("class", "checkmark__check");
+      path.setAttribute("fill", "none");
+      path.setAttribute("d", "M14.1 27.2l7.1 7.2 16.7-16.8");
+
+      // adiciona os elementos ao svg
+      svg.appendChild(circle);
+      svg.appendChild(path);
+
+      // adiciona o svg ao documento
+      contatoFields.removeChild(button);
+      contatoFields.appendChild(svg);
+
       setTimeout(() => {
-        button.classList.remove('loading');
-        button.innerHTML = 'Enviar mensagem';
-      }, 3000);
-    } 
+        contatoFields.removeChild(svg);
+        if (!button.classList.contains('loading')) {
+          button.classList.add('loading');
+          button.innerHTML = 'Enviado com sucesso!';
+          contatoFields.appendChild(button);
+        }
+      }, 2000);
   }
 });
+
 
 
