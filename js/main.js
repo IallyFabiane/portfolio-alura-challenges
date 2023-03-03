@@ -84,7 +84,9 @@ inputs.forEach((input) => {
     input.closest('.contato__elementos').style.padding = "6px 12px";// aqui preciso do elemeto em si e não do evento.Como por padrão os inputs são blur, não preciso capturar o evento para setar o estilo
     label.style.color = "#4a4e69";
     label.style.padding = "0px";
+    
   });
+
 });
 
 textarea.addEventListener('focus', (event) => {
@@ -118,6 +120,10 @@ function validarTextarea() {
     // se o texto digitado for maior do que 300 caracteres
     container.innerText = 'Este campo deve conter até 300 caracteres.';
   }
+
+  setTimeout(() => {
+    container.innerText = '';
+ }, 2000)
   
 }
 
@@ -135,10 +141,28 @@ campo2.addEventListener('input', verificarCampos);
 campo3.addEventListener('input', verificarCampos);
 campo4.addEventListener('input', verificarCampos);
 
+function validarNome() {
+  const container = document.querySelector('.container__nome');
+  let nome = campo1.value;
+
+  if (nome.trim() === '') { //removendo os espaços entre o texto
+    // se o campo estiver vazio
+    container.innerText = 'Este campo é obrigatório';
+  }
+  if (nome.length > 50) {
+    // se o texto digitado for maior do que 50 caracteres
+    container.innerText = 'Este campo deve conter até 50 caracteres';
+  }
+  setTimeout(() => {
+    container.innerText = '';
+  }, 2000)
+}
+
+campo1.addEventListener('blur', validarNome);
 
 function formatarEmail() {
   const container = document.querySelector('.container__email');
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const regex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
   let email = campo2.value;
 
   if (regex.test(email)) {
@@ -148,6 +172,9 @@ function formatarEmail() {
   } else {
     container.innerText = 'E-mail inválido';
   }
+  setTimeout(() => {
+    container.innerText = '';
+  }, 2000)
 }
 
 function validarEmail() {
@@ -160,6 +187,10 @@ function validarEmail() {
   } else {
     formatarEmail();
   }
+
+  setTimeout(() => {
+    container.innerText = '';
+  }, 2000)
 }
 
 campo2.addEventListener('blur', validarEmail);
@@ -176,10 +207,27 @@ function validarAssunto() {
     // se o texto digitado for maior do que 50 caracteres
     container.innerText = 'Este campo deve conter até 50 caracteres';
   }
+
+  setTimeout(() => {
+     container.innerText = '';
+  }, 2000)
 }
 
 campo3.addEventListener('blur', validarAssunto);
 
+function limparInputs() {
+  let nomeValue = campo1.value.trim();
+  let emailValue = campo2.value.trim();
+  // limpar os dados de entrada do usuário evitando caracteres não permitidos antes de enviar a um banco de dados!
+  const cleanName = nomeValue.replace(/[^A-Za-z0-9]/g, '');
+  const cleanEmail = emailValue.replace(/[^a-zA-Z0-9@._-]/g, '');
+  console.log(cleanName, cleanEmail);
+  //
+  campo1.value = '';
+  campo2.value = '';
+  campo3.value = '';
+  campo4.value = '';
+}
 
 button.addEventListener('click', () => {
   const contatoFields = document.querySelector('.contato__fields');
@@ -218,11 +266,10 @@ button.addEventListener('click', () => {
           button.classList.add('loading');
           button.innerHTML = 'Enviado com sucesso!';
           contatoFields.appendChild(button);
-          campo1.value = '';
-          campo2.value = '';
-          campo3.value = '';
-          campo4.value = '';
-        }
+
+          limparInputs();
+        } 
+       
       }, 2000);
   }
 });

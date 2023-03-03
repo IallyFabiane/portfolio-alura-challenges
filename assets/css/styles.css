@@ -701,8 +701,9 @@ svg {
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 656px;
   padding: 6px 12px;
-  height: 40px;
+  height: 56px;
 }
 
 .contato__elementos--textarea {
@@ -717,8 +718,8 @@ svg {
   align-items: flex-start;
   padding: 6px 12px;
   gap: 4px;
-  width: 632px;
-  height: 40px;
+  width: 656px;
+  height: 50px;
 }
 
 .contato__textos--textarea {
@@ -1096,7 +1097,7 @@ svg {
     padding: 32px;
     gap: 10px;
     width: 768px;
-    height: 800px;
+    height: 900px;
   }
 
   .contato { 
@@ -1107,7 +1108,7 @@ svg {
     padding: 0px;
     gap: 32px;
     width: 704px;
-    height: 573px;
+    height: 600px;
   }
 
   .contato__img {
@@ -1118,7 +1119,7 @@ svg {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 20px;
+    margin-top: 200px;
     padding: 0px;
     gap: 8px;
     width: 656px;
@@ -1149,7 +1150,7 @@ svg {
     margin-top: 20px;
     gap: 32px;
     width: 704px;
-    height: 397px;
+    height: 600px;
   }
 
   .contato__input__container
@@ -1208,9 +1209,14 @@ svg {
     line-height: 20px;
  }
 
- .contato__input:focus,
- .contato__input--textarea:focus {
+ .contato__input:focus {
    width: 655px;
+   height: 25px;
+ }
+
+ .contato__input--textarea:focus {
+  width: 655px;
+  height: 133px;
  }
 
  .contato__button {
@@ -1224,6 +1230,10 @@ svg {
     height: 40px;
     font-size: 14px;
     line-height: 16px;
+ }
+
+ .checkmark {
+   bottom: -25%;
  }
 
   footer {
