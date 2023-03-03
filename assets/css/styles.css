@@ -1247,6 +1247,10 @@ svg {
 }
 
 @media  (min-width: 360px) and (max-width: 767px) {
+ 
+  html, body {
+    overflow-x: hidden;
+  }
 
   header {
     width: 360px;
@@ -1256,18 +1260,16 @@ svg {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    padding-bottom: 0;
-    gap: 20px;
-    width: 360px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0 5px;
+    gap: 130px;
+    width: 350px;
     height: 56px;
   }
 
   .menu {
     flex-direction: column;
-    margin-top: 5px;
   }
 
   .menu__item:nth-child(1) {
@@ -1293,9 +1295,13 @@ svg {
   .menu__item:nth-child(6) {
     order: 1;
     font-weight: bold;
-    width: 133px;
-    font-size: 16px;
+    width: 60px;
+    font-size: 14px;
     line-height: 16px;
+  }
+
+  .menu__item:nth-child(6) > a {
+    width: 60px;
   }
 
   .logo {
@@ -1304,16 +1310,17 @@ svg {
     align-items: center;
     padding: 0px;
     gap: 8px;
-    width: 104px;
+    width: 40px;
     margin: 0;
   }
 
   .logo > img {
-    width: 30px;
+    width: 15px;
+    height: 15px;
   }
- 
+
   .logo > span {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 16px;
     white-space: nowrap;
   }
@@ -1328,9 +1335,9 @@ svg {
     "apresentacao__lista"
     ;
     margin: 0;
-    padding: 0px 16px;
+    padding: 0 10px;
     place-items: start stretch;
-    grid-template-columns: 360px;
+    grid-template-columns: 340px;
     grid-template-rows: 160px 160px 30px 16px;
     row-gap: 20px;
   }
@@ -1341,7 +1348,7 @@ svg {
   }
 
   .apresentacao__titulo {
-    width: 360px;
+    width: 344px;
   }
 
   .apresentacao__titulo__h1 {
@@ -1398,7 +1405,7 @@ svg {
     word-wrap: break-word;
     word-break: break-word; 
     width: 320px;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 30px;
   }
 
@@ -1416,9 +1423,9 @@ svg {
     grid-template-columns: repeat(2, 180px);
     grid-template-rows: 100px repeat(3, 160px);
     width: 360px;
-    margin: 0 auto;
+    margin: 0;
     height: 650px;
-    column-gap: 10px;
+    column-gap: 0px;
     place-items: center;
   }
 
@@ -1452,9 +1459,9 @@ svg {
     grid-template-columns: repeat(2, 180px);
     grid-template-rows: 100px repeat(6, 160px);
     width: 360px;
-    margin: 0 auto;
+    margin: 0;
     height: 1100px;
-    column-gap: 10px;
+    column-gap: 0px;
     place-items: center;
   }
 
@@ -1498,7 +1505,7 @@ svg {
     grid-template-rows: 90px repeat(7, 170px 90px);
     place-items: center;
     gap: 20px;
-    margin: 0 auto;
+    margin: 0;
     width: 360px;
     height: 2300px;
   }
@@ -1531,9 +1538,9 @@ svg {
   }
 
   #projetos {
-    width: 360px;
+    width: 340px;
     height: 360px;
-    margin: 0;
+    margin: 0 auto;
   }
 
   .projetos__h3 {
@@ -1589,7 +1596,7 @@ svg {
     padding: 32px;
     gap: 10px;
     width: 360px;
-    height: 900px;
+    height: 800px;
   }
 
   .contato {
@@ -1612,7 +1619,6 @@ svg {
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    margin-top: 50px;
     gap: 8px;
     width: 296px;
     height: 110px;
