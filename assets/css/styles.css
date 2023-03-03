@@ -1391,7 +1391,7 @@ svg {
   .sobre {
     padding: 30px 20px;
     gap: 10px;
-    width: 360px;
+    /*width: 360px;*/
     height: 700px;
     align-items: flex-start;
   }
@@ -1479,9 +1479,9 @@ svg {
     white-space: nowrap;
   }
 
-  #formacao {
+  /*#formacao {
     width: 360px;
-  }
+  }*/
 
   .formacao {
     grid-template-areas: 
@@ -1595,7 +1595,7 @@ svg {
     align-items: center;
     padding: 32px;
     gap: 10px;
-    width: 360px;
+    /*width: 360px;*/
     height: 800px;
   }
 
