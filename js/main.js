@@ -106,7 +106,7 @@ function validarTextarea() {
   const texto = textarea.value;
   const container = document.querySelector('.container__mensagem');
 
-  if (texto.trim() === '') {
+  if (texto.trim() === '') { //removendo os espaços entre o texto
     // se o campo estiver vazio
     container.innerText = 'Este campo é obrigatório';
   } else  {
@@ -121,13 +121,13 @@ function validarTextarea() {
   
 }
 
-
 function verificarCampos() {
   if (campo1.value !== '' && campo2.value !== '' && campo3.value !== '' && campo4.value !== '') {
     button.disabled = false;
   } else {
     button.disabled = true;
   }
+
 }
 
 campo1.addEventListener('input', verificarCampos);
@@ -136,7 +136,16 @@ campo3.addEventListener('input', verificarCampos);
 campo4.addEventListener('input', verificarCampos);
 
 button.addEventListener('click', () => {
-  button.classList.add('loading');
+  if (campo1.value !== '' && campo2.value !== '' && campo3.value !== '' && campo4.value !== '') {
+    if (!button.classList.contains('loading')) {
+      button.classList.add('loading');
+      button.innerHTML = 'Enviado com sucesso!';
+      setTimeout(() => {
+        button.classList.remove('loading');
+        button.innerHTML = 'Enviar mensagem';
+      }, 3000);
+    } 
+  }
 });
 
 
