@@ -135,6 +135,22 @@ campo2.addEventListener('input', verificarCampos);
 campo3.addEventListener('input', verificarCampos);
 campo4.addEventListener('input', verificarCampos);
 
+function validarAssunto() {
+  const container = document.querySelector('.container__assunto');
+  let assunto = campo3.value;
+
+  if (assunto.trim() === '') { //removendo os espaços entre o texto
+    // se o campo estiver vazio
+    container.innerText = 'Este campo é obrigatório';
+  }
+  if (assunto.length > 50) {
+    // se o texto digitado for maior do que 300 caracteres
+    container.innerText = 'Este campo deve conter até 50 caracteres';
+  }
+}
+
+campo3.addEventListener('blur', validarAssunto);
+
 button.addEventListener('click', () => {
   const contatoFields = document.querySelector('.contato__fields');
   if (campo1.value !== '' && campo2.value !== '' && campo3.value !== '' && campo4.value !== '') {
@@ -172,6 +188,10 @@ button.addEventListener('click', () => {
           button.classList.add('loading');
           button.innerHTML = 'Enviado com sucesso!';
           contatoFields.appendChild(button);
+          campo1.value = '';
+          campo2.value = '';
+          campo3.value = '';
+          campo4.value = '';
         }
       }, 2000);
   }
