@@ -135,6 +135,35 @@ campo2.addEventListener('input', verificarCampos);
 campo3.addEventListener('input', verificarCampos);
 campo4.addEventListener('input', verificarCampos);
 
+
+function formatarEmail() {
+  const container = document.querySelector('.container__email');
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  let email = campo2.value;
+
+  if (regex.test(email)) {
+    // se o texto digitado não seguir as especificações da regex
+    container.style.color = "#228B22";
+    container.innerText = 'E-mail válido';
+  } else {
+    container.innerText = 'E-mail inválido';
+  }
+}
+
+function validarEmail() {
+  const container = document.querySelector('.container__email');
+  let email = campo2.value;
+
+  if (email === '') { 
+    // se o campo estiver vazio
+    container.innerText = 'Este campo é obrigatório';
+  } else {
+    formatarEmail();
+  }
+}
+
+campo2.addEventListener('blur', validarEmail);
+
 function validarAssunto() {
   const container = document.querySelector('.container__assunto');
   let assunto = campo3.value;
@@ -144,12 +173,13 @@ function validarAssunto() {
     container.innerText = 'Este campo é obrigatório';
   }
   if (assunto.length > 50) {
-    // se o texto digitado for maior do que 300 caracteres
+    // se o texto digitado for maior do que 50 caracteres
     container.innerText = 'Este campo deve conter até 50 caracteres';
   }
 }
 
 campo3.addEventListener('blur', validarAssunto);
+
 
 button.addEventListener('click', () => {
   const contatoFields = document.querySelector('.contato__fields');
