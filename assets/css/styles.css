@@ -167,10 +167,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 64px 0;
+  padding: 54px 0;
   gap: 10px;
   width: 1440px;
-  height: 350px;
+  height: 400px;
   background-color: var(--mediumlilac);
 }
 
@@ -181,7 +181,7 @@ body {
   padding: 0px;
   gap: 16px;
   width: 1136px;
-  height: 255px;
+  height: 300px;
 }
 
 .sobre__mim__h3 {
@@ -584,7 +584,7 @@ svg {
 .contato__img { 
   width: 464px;
   height: 593px;
-  margin-right: 20px;
+  margin-right: 40px;
 }
 
 .contato__titulo {
@@ -1391,8 +1391,7 @@ svg {
   .sobre {
     padding: 30px 20px;
     gap: 10px;
-    /*width: 360px;*/
-    height: 700px;
+    height: 680px;
     align-items: flex-start;
   }
 
@@ -1405,7 +1404,7 @@ svg {
     word-wrap: break-word;
     word-break: break-word; 
     width: 320px;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
   }
 

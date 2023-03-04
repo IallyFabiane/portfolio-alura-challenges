@@ -170,7 +170,7 @@ function formatarEmail() {
     container.style.color = "#228B22";
     container.innerText = 'E-mail válido';
   } else {
-    container.innerText = 'E-mail inválido';
+    container.innerText = 'E-mail inválido.';
   }
   setTimeout(() => {
     container.innerText = '';
